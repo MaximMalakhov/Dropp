@@ -1,0 +1,60 @@
+/*Шрифты*/
+
+/*
+*Общие стили
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "Bebas Neue", Arial, sans-serif;
+	font-size: 16px;
+	color: #000;
+	background: #fff;
+}
+
+
+/*
+*Типографика
+*/
+
+@import "typography/link.less";
+@import "typography/title.less";
+@import "typography/list.less";
+@import "typography/paragraph.less";
+
+/*
+*Файлы для облегчения работы польователя
+*/
+
+@import "helpers/clearfix.less";
+@import "helpers/functions.less";
+
+/*
+*Каркасы основных блоков
+*/
+@import "layout/grid.less";
+@import "layout/header.less";
+@import "layout/footer.less";
+
+/*
+*Компоненты страницы
+*/
+
+@import "components/menu.less";
+@import "components/button.less";
+
+
+/*
+*секции страницы
+*/
+
+@import "sections/banner.less";
+@import "sections/section.less";
+@import "sections/services.less";
+@import "sections/about.less";
+@import "sections/latest-posts.less";
+@import "sections/portfolio.less";
+@import "sections/contact.less";
