@@ -1,36 +1,21 @@
-.contributor__img{
+.about__img-box{
 	display: inline-block;
-}
-
-.about__content{
-	padding-top: 60px;
-}
-
-.contributor__input{
-	display: none;
+	width: 20%
 }
 
 .contributor__inner{
 	background-color: #fd5433;
-	margin-top: 60px;
-	padding-top: 65px;
-	padding-bottom: 45px;
+	margin-top: 6rem;
+	padding-top: 6.5rem;
+	padding-bottom: 4.5rem;
 	color: #fff;
 }
 
 .contributor__info{
-	width: 45%;
-	display: inline-block;
-}
-
-.contributor__description{
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
-
-.contributor__skills{
-	width: 48.71%;
-	display: inline-block;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 .icon_social-networks{
@@ -39,6 +24,7 @@
 	width: 26px;
 	height: 26px;
 	margin-right: 15px;
+	text-indent: -99999px;
 	
 	&:hover, &:focus{
 		opacity: .8;
@@ -73,20 +59,12 @@
 	text-transform: uppercase;
 }
 
-.skill__inner{
-	width: 340px;
-}
 .skill{
 	margin-bottom: 12px;
 	font-family: Arial;
 }
 
-.skills__inner{
-	margin-top: 50px;
-}
-
 .skill__progress{
-	width: 280px;
 	height: 10px;
 }
 
@@ -116,4 +94,75 @@ progress::-moz-progress-value{
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
+}
+
+@media screen and (min-width: 921px){
+	
+	.about__content{
+		padding-top: 6rem;
+	}
+	
+	.contributor__article, .contributor__skills{
+		width: 45%;
+		display: inline-block;
+	}
+	
+	.skill__progress{
+		width: 84.5%;
+	}
+			
+	.skill__inner{
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 920px) and (min-width: 641px){
+	
+	.about__content{
+		padding-top: 5rem;
+	}
+	
+	.contributor__article, .contributor__skills{
+		width: 45%;
+		display: inline-block;
+	}
+	
+	.skill__progress{
+		width: 70%;
+	}
+		
+	.skill__inner{
+		width: 60%;
+	}
+}
+
+@media screen and (min-width: 641px){
+	
+	.skills__inner, .contributor__description, .contributor__socials{
+		margin-top: 5rem;
+	}
+}
+
+@media screen and (max-width: 640px){
+	
+	.about__content{
+		padding-top: 4rem;
+	}
+	
+	.contributor__article, .contributor__skills{
+		width: 100%;
+		display: inline-block;
+	}
+	
+	.skill__progress{
+		width: 80%;
+	}
+		
+	.skill__inner{
+		width: 65%;
+	}
+	
+	.skills__inner, .contributor__description, .contributor__socials, .contributor__skills{
+		margin-top: 3rem;
+	}
 }
