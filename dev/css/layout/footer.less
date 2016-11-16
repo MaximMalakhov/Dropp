@@ -1,7 +1,33 @@
+.footer__ineer{
+	background-color: #b2b2b2;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
 .footer__development{
 	color: #fff;
 	text-align: center;
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
 	border-top: 2px solid #fff;
+}
+
+@media screen and (min-width: 921px){
+
+	.footer__ineer{
+		.path("content/bg-contact.jpg");
+	}
+}
+
+@media screen and (max-width: 920px) and (min-width: 641px){
+	.footer__ineer{
+		.path("content/bg-contact_920.jpg");
+	}
+}
+
+@media screen and (max-width: 640px){
+	.footer__ineer{
+		.path("content/bg-contact_640.jpg");
+	}
 }

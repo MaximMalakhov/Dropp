@@ -70,6 +70,8 @@
 
 	.latest-post{
 		width: 45%;
+		border-bottom: 1px solid #828282;
+		padding-bottom: 25px;
 	}
 	
 	.latest-post:nth-child(n+3){
@@ -86,18 +88,17 @@
 
 	.latest-post{
 		text-align: center;
+		border-bottom: 1px solid #828282;
+		padding-bottom: 25px;
+		margin-top: 1.5rem;
+		
+		&:first-child{
+			margin-top: 0;
+		}
 	}
 	
 	.latest-post__header:before{
 		left: 50%;
 		transform: translate(-50%,0);
-	}
-	
-	.latest-post{
-		margin-top: 3.5rem;
-		
-		&:first-child{
-			margin-top: 0;
-		}
 	}
 }

@@ -1,5 +1,4 @@
 .banner{
-	.path("content/banner.png");
 	background-color: #b2b2b2;
 	text-align: center;
 	background-repeat: no-repeat;
@@ -9,7 +8,7 @@
 	text-transform: uppercase;
 }
 
-.benner__content{
+.banner__content{
 	padding-top: 24rem;
 	padding-bottom: 35.5rem;
 }
@@ -22,6 +21,10 @@
 
 @media screen and (min-width: 921px){
 
+	.banner{
+		.path("content/banner.jpg");
+	}
+
 	.banner__inscription{
 		font-size: 12.5rem;
 	}
@@ -29,12 +32,20 @@
 
 @media screen and (max-width: 920px)and (min-width: 641px){
 
+	.banner{
+		.path("content/banner_920.jpg");
+	}
+	
 	.banner__inscription{
 		font-size: 8.5rem;
 	}
 }
 
 @media screen and (max-width: 640px){
+
+	.banner{
+		.path("content/banner_640.jpg");
+	}
 
 	.banner__inscription{
 		font-size: 6rem;

@@ -1,6 +1,14 @@
 .about__img-box{
 	display: inline-block;
-	width: 20%
+	width: 20%;
+	position: relative;
+}
+
+.about__img-box_active:after{
+    content: "";
+    position: absolute;
+	transform: translate(-50%,0);
+    left: 50%;
 }
 
 .contributor__inner{
@@ -65,28 +73,32 @@
 }
 
 .skill__progress{
-	height: 10px;
+	&[value]{
+		/*Сброс стилей progress*/
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		/*Для IE и Firefox*/
+		border: none;
+		/*Для IE*/
+		color: #fff; /*Цвет полосы*/
+				height: 10px;
+		background-color: transparent; /*Цвет контейнера*/
+	}
+	
+	&[value]::-webkit-progress-bar {
+		background-color: transparent; /*Цвет контейнера*/
+	}
+
+	&[value]::-webkit-progress-value {
+		background-color: #fff; /*Цвет полосы*/
+	}
+
+	&[value]::-moz-progress-bar {
+		background-color: #fff; /*Цвет полосы*/
+	}
 }
 
-progress{
-	background-color: #fd5433;
-}
-
-progress::-webkit-progress-bar{
-    background-color: #fd5433;
-}
-
-progress::-webkit-progress-value{
-	background-color: #fff;
-}
-
-progress::-moz-progress-bar{
-	background-color: #fd5433;
-}
-
-progress::-moz-progress-value{
-	background-color: #fff;
-}
 
 .skill_align-space-between, 
 .skill__inner_align-space-between{
@@ -114,6 +126,13 @@ progress::-moz-progress-value{
 	.skill__inner{
 		width: 70%;
 	}
+	
+	.about__img-box_active:after{
+		bottom: -9rem;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 30px solid #fff;
+	}
 }
 
 @media screen and (max-width: 920px) and (min-width: 641px){
@@ -133,6 +152,13 @@ progress::-moz-progress-value{
 		
 	.skill__inner{
 		width: 60%;
+	}
+	
+	.about__img-box_active:after{
+		bottom: -8.5rem;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-top: 22px solid #fff;
 	}
 }
 
@@ -164,5 +190,12 @@ progress::-moz-progress-value{
 	
 	.skills__inner, .contributor__description, .contributor__socials, .contributor__skills{
 		margin-top: 3rem;
+	}
+	
+	.about__img-box_active:after{
+		bottom: -8rem;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 16px solid #fff;
 	}
 }
